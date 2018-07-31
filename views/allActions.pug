@@ -1,0 +1,321 @@
+doctype html
+html(lang='en')
+  head
+    // Required meta tags always come first
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title Material Design Bootstrap Template
+    // Font Awesome
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    // Bootstrap core CSS
+    link(href='./css/bootstrap.min.css', rel='stylesheet')
+    // Material Design Bootstrap
+    link(href='./css/mdb.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='./css/jquery-ui.css')
+    link(rel='stylesheet', href='./css/styleIt.css')
+    style.
+      .top-nav-collapse {
+      background-color: #3f51b5!important;
+      }
+      @media (max-width: 768px) {
+      .navbar:not(.top-nav-collapse) {
+      background: #3f51b5!important;
+      }
+      }
+      h5 {
+      letter-spacing: 3px;
+      }
+      @media (max-width: 740px) {
+      .full-height,
+      .full-height body,
+      .full-height header,
+      .full-height header .view {
+      height: 700px;
+      }
+      }
+    script(src='https://code.jquery.com/jquery-1.12.4.js')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+  body
+    nav.navbar.navbar-expand-lg.navbar-dark.primary-color.colorIt
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarNav.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item.active
+            a.nav-link(href='/')
+              | Home 
+              span.sr-only (current)
+          li.nav-item.dropdown
+            a#navbarDropdownMenuLink.nav-link.dropdown-toggle.my-0(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') View Business
+            .dropdown-menu.dropdown-primary(aria-labelledby='navbarDropdownMenuLink')
+              a.dropdown-item(href='/allContacts') All Contacts
+              a.dropdown-item(href='/allInteractions') All Interactions
+              a.dropdown-item(href='/allActions') All Actions
+              a.dropdown-item(href='/allImprovements') All Improvements
+          li.nav-item.dropdown
+            a#navbarDropdownMenuLink.nav-link.dropdown-toggle.my-0(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Sellers
+            .dropdown-menu.dropdown-primary(aria-labelledby='navbarDropdownMenuLink')
+              a.dropdown-item(href='/top10Seller') Top 10
+              a.dropdown-item(href='/activeSeller') Active
+              a.dropdown-item(href='/passiveSeller') Passive
+              a.dropdown-item(href='/inactiveSeller') Inactive
+              a.dropdown-item(href='/pendingSeller') Pending
+              a.dropdown-item(href='/closedSeller') Closed
+          li.nav-item.dropdown
+            a#navbarDropdownMenuLink.nav-link.dropdown-toggle.my-0(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Buyer
+            .dropdown-menu.dropdown-primary(aria-labelledby='navbarDropdownMenuLink')
+              a.dropdown-item(href='/top10Buyer') Top 10
+              a.dropdown-item(href='/activeBuyer') Active
+              a.dropdown-item(href='/passiveBuyer') Passive
+              a.dropdown-item(href='/inactiveBuyer') Inactive
+              a.dropdown-item(href='/pendingBuyer') Pending
+              a.dropdown-item(href='/closedBuyer') Closed
+          li.nav-item.dropdown
+            a#navbarDropdownMenuLink.nav-link.dropdown-toggle.my-0(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Investor
+            .dropdown-menu.dropdown-primary(aria-labelledby='navbarDropdownMenuLink')
+              a.dropdown-item(href='/top10Investor') Top 10
+              a.dropdown-item(href='/activeInvestor') Active
+              a.dropdown-item(href='/passiveInvestor') Passive
+              a.dropdown-item(href='/inactiveInvestor') Inactive
+              a.dropdown-item(href='/pendingInvestor') Pending
+              a.dropdown-item(href='/closedInvestor') Closed
+          li.nav-item.dropdown
+            a#navbarDropdownMenuLink.nav-link.dropdown-toggle.my-0(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') SOI
+            .dropdown-menu.dropdown-primary(aria-labelledby='navbarDropdownMenuLink')
+              a.dropdown-item(href='/top10SOI') Top 10
+              a.dropdown-item(href='/activeSOI') Active
+              a.dropdown-item(href='/passiveSOI') Passive
+              a.dropdown-item(href='/inactiveSOI') Inactive
+              a.dropdown-item(href='/pendingSOI') Pending
+              a.dropdown-item(href='/closedSOI') Closed
+          li.nav-item.dropdown
+            a#navbarDropdownMenuLink.nav-link.dropdown-toggle.my-0(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Business Partner
+            .dropdown-menu.dropdown-primary(aria-labelledby='navbarDropdownMenuLink')
+              a.dropdown-item(href='/top10Partner') Top 10
+              a.dropdown-item(href='/activePartner') Active
+              a.dropdown-item(href='/passivePartner') Passive
+              a.dropdown-item(href='/inactivePartner') Inactive
+              a.dropdown-item(href='/pendingPartner') Pending
+              a.dropdown-item(href='/closedParter') Closed
+          li.nav-item.dropdown
+            a#navbarDropdownMenuLink.nav-link.dropdown-toggle.my-0(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Other
+            .dropdown-menu.dropdown-primary(aria-labelledby='navbarDropdownMenuLink')
+              a.dropdown-item(href='/top10Other') Top 10
+              a.dropdown-item(href='/activeOther') Active
+              a.dropdown-item(href='/passiveOther') Passive
+              a.dropdown-item(href='/inactiveOther') Inactive
+              a.dropdown-item(href='/pendingOther') Pending
+              a.dropdown-item(href='/closedOther') Closed
+          li.nav-item
+            a.nav-link(href='#') View Pipeline
+          li.nav-item
+            a.btn.btn-success.button-collapse.float-right(href='#', data-activates='slide-out') Add Inputs & View Business Analytics
+    // SideNav slide-out button
+    // Sidebar navigation
+    #slide-out.side-nav.fixed
+      ul.custom-scrollbar
+        li
+          h1.text-center Add Inputs
+          ul.collapsible.collapsible-accordion
+            li
+              a.collapsible-header.waves-effect.arrow-r
+                i.fa.fa-chevron-right
+                |  Contacts
+                i.fa.fa-angle-down.rotate-icon
+              .collapsible-body
+                ul
+                  li
+                    a.waves-effect(href='/addContact') Add Contact
+                  li
+                    a.waves-effect(href='/allContacts') View All Contacts
+            li
+              a.collapsible-header.waves-effect.arrow-r
+                i.fa.fa-eye
+                | Interaction
+                i.fa.fa-angle-down.rotate-icon
+              .collapsible-body
+                ul
+                  //
+                    <li><a href="/addInteraction" class="waves-effect">Add Interaction</a>
+                    </li>
+                  li
+                    a.waves-effect(href='/allInteractions') View All Interactions
+            li
+              a.collapsible-header.waves-effect.arrow-r
+                i.fa.fa-hand-pointer-o
+                | Action
+                i.fa.fa-angle-down.rotate-icon
+              .collapsible-body
+                ul
+                  li
+                    a.waves-effect(href='/addAction') Add Action
+                  li
+                    a.waves-effect(href='/allActions') View All Actions
+            li
+              a.collapsible-header.waves-effect.arrow-r
+                i.fa.fa-eye
+                | Improvement
+                i.fa.fa-angle-down.rotate-icon
+              .collapsible-body
+                ul
+                  li
+                    a.waves-effect(href='/addImprovement') Add Improvement
+                  li
+                    a.waves-effect(href='/allImprovements') View All Improvements
+            li
+              a.collapsible-header.waves-effect.arrow-r
+                i.fa.fa-eye
+                | Reward
+                i.fa.fa-angle-down.rotate-icon
+              .collapsible-body
+                ul
+                  li
+                    a.waves-effect(href='/addReward') Add Reward
+                  li
+                    a.waves-effect(href='/allRewards') View All Rewards
+            li
+              a.collapsible-header.waves-effect.arrow-r
+                i.fa.fa-eye
+                | Pipeline
+                i.fa.fa-angle-down.rotate-icon
+              .collapsible-body
+                ul
+                  //
+                    <li><a href="/addPipeline" class="waves-effect">Add Pipeline</a>
+                    </li>
+                  li
+                    a.waves-effect(href='/allPipeline') View Pipeline
+        // /. Side navigation links
+      .sidenav-bg.rgba-blue-strong
+    // /. Sidebar navigation
+    .container
+      h1.text-center All Current Actions
+      // Table
+      table.table.table-striped
+        // Table head
+        thead
+          tr
+            th Title
+            th Year Built
+            th Denomination
+            th City
+            th County
+            th History
+            th Edit
+            th Delete
+        // Table head
+        // Table body
+        tbody
+          tr
+            td
+            td
+            td
+            td
+        // Table body
+      // Table
+    // Footer
+    footer.page-footer.font-small.mdb-color.pt-4
+      // Footer Links
+      .container.text-center.text-md-left
+        // Footer links
+        .row.text-center.text-md-left.mt-3.pb-3
+          // Grid column
+          .col-md-3.col-lg-3.col-xl-3.mx-auto.mt-3
+            h6.text-uppercase.mb-4.font-weight-bold Realigo
+            p Next Generation Real Estate Software for the Modern Real Estate Agent
+          // Grid column
+          hr.w-100.clearfix.d-md-none
+          // Grid column
+          .col-md-2.col-lg-2.col-xl-2.mx-auto.mt-3
+            h6.text-uppercase.mb-4.font-weight-bold Navigation
+            p
+              a(href='/') Home
+            p
+              a(href='/allContacts') All Contacts
+            p
+              a(href='/allInteractions') All Interactions
+            p
+              a(href='/pipeline') Pipeline
+          // Grid column
+          hr.w-100.clearfix.d-md-none
+          // Grid column
+          .col-md-3.col-lg-2.col-xl-2.mx-auto.mt-3
+            h6.text-uppercase.mb-4.font-weight-bold Useful Content
+            p
+              a(href='/') How to win in today's market
+            p
+              a(href='/') How to build a successful business
+            p
+              a(href='/') How to improve your sales skills
+            p
+              a(href='/') Help
+          // Grid column
+          hr.w-100.clearfix.d-md-none
+          // Grid column
+          .col-md-4.col-lg-3.col-xl-3.mx-auto.mt-3
+            h6.text-uppercase.mb-4.font-weight-bold Contact
+            p
+              i.fa.fa-home.mr-3
+              | Salt Lake City, Utah
+            p
+              i.fa.fa-envelope.mr-3
+              | steverealestate@gmail.com
+            p
+              i.fa.fa-phone.mr-3
+              |  + 01 234 567 88
+          // Grid column
+        // Footer links
+        hr
+        // Grid row
+        .row.d-flex.align-items-center
+          // Grid column
+          .col-md-7.col-lg-8
+            // Copyright
+            p.text-center.text-md-left
+              | © 2018 Copyright:
+              a(href='https://mdbootstrap.com/bootstrap-tutorial/')
+                strong  realigo.com
+          // Grid column
+          // Grid column
+          .col-md-5.col-lg-4.ml-lg-0
+            // Social buttons
+            .text-center.text-md-right
+              ul.list-unstyled.list-inline
+                li.list-inline-item
+                  a.btn-floating.btn-sm.rgba-white-slight.mx-1
+                    i.fa.fa-facebook
+                li.list-inline-item
+                  a.btn-floating.btn-sm.rgba-white-slight.mx-1
+                    i.fa.fa-twitter
+                li.list-inline-item
+                  a.btn-floating.btn-sm.rgba-white-slight.mx-1
+                    i.fa.fa-google-plus
+                li.list-inline-item
+                  a.btn-floating.btn-sm.rgba-white-slight.mx-1
+                    i.fa.fa-linkedin
+          // Grid column
+        // Grid row
+      // Footer Links
+    // Footer
+    // SCRIPTS
+    // JQuery
+    // <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+    // Bootstrap tooltips
+    script(type='text/javascript', src='./js/popper.min.js')
+    // Bootstrap core JavaScript
+    script(type='text/javascript', src='./js/bootstrap.min.js')
+    // MDB core JavaScript
+    script(type='text/javascript', src='./js/mdb.min.js')
+    script.
+      new WOW().init();
+      // MDB Lightbox Init
+      $(function () {
+      $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+      });
+    script.
+      // SideNav Button Initialization
+      $(".button-collapse").sideNav();
+      // SideNav Scrollbar Initialization
+      var sideNavScrollbar = document.querySelector('.custom-scrollbar');
+      Ps.initialize(sideNavScrollbar);

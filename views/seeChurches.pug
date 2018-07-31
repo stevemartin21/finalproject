@@ -1,0 +1,162 @@
+doctype html
+html(lang='en')
+  head
+    // Required meta tags always come first
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title Material Design Bootstrap Template
+    // Font Awesome
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    // Bootstrap core CSS
+    link(href='stylesheets/bootstrap.min.css', rel='stylesheet')
+    // Material Design Bootstrap
+    link(href='stylesheets/mdb.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='stylesheets/jquery-ui.css')
+    link(rel='stylesheet', href='stylesheets/styleIt.css')
+    style.
+      .top-nav-collapse {
+      background-color: #3f51b5!important;
+      }
+      @media (max-width: 768px) {
+      .navbar:not(.top-nav-collapse) {
+      background: #3f51b5!important;
+      }
+      }
+      h5 {
+      letter-spacing: 3px;
+      }
+      @media (max-width: 740px) {
+      .full-height,
+      .full-height body,
+      .full-height header,
+      .full-height header .view {
+      height: 700px;
+      }
+      }
+    script(src='https://code.jquery.com/jquery-1.12.4.js')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+    script.
+      $( function() {
+      $('.datepicker').pickadate();
+      } );
+    script.
+      $( function() {
+      $('#input_starttime').pickatime({});
+      } );
+  body
+    // Navbar
+    nav.navbar.navbar-expand-lg.navbar-dark.primary-color
+      // Navbar brand
+      a.navbar-brand(href='#') Navbar
+      // Collapse button
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#basicExampleNav', aria-controls='basicExampleNav', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      // Collapsible content
+      #basicExampleNav.collapse.navbar-collapse
+        // Links
+        ul.navbar-nav.mr-auto
+          li.nav-item.active
+            a.nav-link(href='#')
+              | Home
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='#') Features
+          li.nav-item
+            a.nav-link(href='#') Pricing
+          li.nav-item
+            a.nav-link(href='#') Register
+          li.nav-item
+            a.nav-link(href='#') Log In
+          // Dropdown
+          //
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+            </li>
+        // Links
+      // Collapsible content
+    // /.Navbar
+    //
+      <div class="container">
+      <form method="GET" action="/auth/facebook">
+      <div class="text-center mt-4">
+      <button class="btn btn-primary" type="submit">Login with Facebook</button>
+      </div>
+      </form>
+      <form method="GET" action="/auth/google">
+      <div class="text-center mt-4">
+      <button class="btn btn-primary" type="submit">Login with Google+</button>
+      </div>
+      </form>
+      </div>
+    // Main Navigation
+    header
+      .view.jarallax(data-jarallax='{"speed": 0.2}', style="background-image: url('images/manti2.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;")
+        .mask.rgba-white-light
+          .container.flex-center.text-center
+            .row.mt-5
+              .col-md-12.wow.fadeIn.mb-3
+                h1.display-3.mb-2.wow.fadeInDown(data-wow-delay='0.3s')
+                  | Historic Utah Churches this is great 
+                  a.indigo-text.font-weight-bold
+                h5.text-uppercase.mb-3.mt-1.font-weight-bold.wow.fadeIn(data-wow-delay='0.4s') Discover the past
+                a.btn.btn-light-blue.btn-lg.wow.fadeIn(data-wow-delay='0.4s') It Begins
+                a.btn.btn-indigo.btn-lg.wow.fadeIn(data-wow-delay='0.4s') Start here
+      .container
+        // Grid row
+        .row
+          // Grid column
+          .col-md-12.text-center.mb-3
+            h1.font-weight-bold.light-blue-text.my-3 Lorem ipsum dolor sit amet, consectetur quis elit.
+            p(align='justify')
+              | Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.
+          // Grid column
+        // Grid row  https://mdbootstrap.com/img/Photos/Others/food2.jpg
+      .view.jarallax.intro-2(data-jarallax='{"speed": 0.2}', style='background-image: url(https://mdbootstrap.com/img/Photos/Others/img%20%2844%29.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;')
+        .mask.rgba-pink-slight
+      .view.jarallax.intro-2(data-jarallax='{"speed": 0.2}', style="background-image: url('images/grafton2.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;")
+        .mask.rgba-purple-slight
+          .container.h-100.d-flex.align-items-center.d-flex.justify-content-center
+            .row.mt-5
+              .col-md-12.wow.fadeIn.mb-3
+                .intro-info-content.text-center
+                  h1.display-1.white-text.mb-2.wow.fadeInDown(data-wow-delay='0.3s') Welcome on my page!
+                  h4.mb-3.mt-1.white-text.font-weight-bold.wow.fadeIn(data-wow-delay='0.4s') Lorem ipsum dolor sit amet
+                  a.btn.btn-pink.wow.fadeIn(data-wow-delay='0.4s') Read more
+      .container
+        // Grid row
+        .row
+          // Grid column
+          .col-md-12.text-center.my-3
+            h1.font-weight-bold.pink-text.mb-3 Lorem ipsum dolor sit amet, consectetur quis elit.
+            p(align='justify')
+              | Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.
+          // Grid column
+        // Grid row
+    // Main Navigation
+    // SCRIPTS
+    // JQuery
+    // <script type="text/javascript" src="javascripts/jquery-3.2.1.min.js"></script>
+    // Bootstrap tooltips
+    script(type='text/javascript', src='javascripts/popper.min.js')
+    // Bootstrap core JavaScript
+    script(type='text/javascript', src='javascripts/bootstrap.min.js')
+    // MDB core JavaScript
+    script(type='text/javascript', src='javascripts/mdb.min.js')
+    script.
+      new WOW().init();
+      // MDB Lightbox Init
+      $(function () {
+      $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+      });
+    script.
+      // SideNav Button Initialization
+      $(".button-collapse").sideNav();
+      // SideNav Scrollbar Initialization
+      var sideNavScrollbar = document.querySelector('.custom-scrollbar');
+      Ps.initialize(sideNavScrollbar);

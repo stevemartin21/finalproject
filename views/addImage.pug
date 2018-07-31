@@ -1,0 +1,119 @@
+doctype html
+html(lang='en')
+  head
+    // Required meta tags always come first
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title Material Design Bootstrap Template
+    // Font Awesome
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    // Bootstrap core CSS
+    link(href='stylesheets/bootstrap.min.css', rel='stylesheet')
+    // Material Design Bootstrap
+    link(href='stylesheets/mdb.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='stylesheets/jquery-ui.css')
+    link(rel='stylesheet', href='stylesheets/styleIt.css')
+    style.
+      .top-nav-collapse {
+      background-color: #3f51b5!important;
+      }
+      @media (max-width: 768px) {
+      .navbar:not(.top-nav-collapse) {
+      background: #3f51b5!important;
+      }
+      }
+      h5 {
+      letter-spacing: 3px;
+      }
+      @media (max-width: 740px) {
+      .full-height,
+      .full-height body,
+      .full-height header,
+      .full-height header .view {
+      height: 700px;
+      }
+      }
+    script(src='https://code.jquery.com/jquery-1.12.4.js')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+    script.
+      $( function() {
+      $('.datepicker').pickadate();
+      } );
+    script.
+      $( function() {
+      $('#input_starttime').pickatime({});
+      } );
+  body
+    // Navbar
+    nav.navbar.navbar-expand-lg.navbar-dark.primary-color
+      // Navbar brand
+      a.navbar-brand(href='#') Navbar
+      // Collapse button
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#basicExampleNav', aria-controls='basicExampleNav', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      // Collapsible content
+      #basicExampleNav.collapse.navbar-collapse
+        // Links
+        ul.navbar-nav.float-right
+          li.nav-item.active
+            a.nav-link(href='#')
+              | Home
+              span.sr-only (current)
+          li.nav-item.float-right
+            a.nav-link(href='#') Log in
+          li.nav-item.float-right
+            a.nav-link(href='#') Log out
+        // Links
+      // Collapsible content
+    // /.Navbar
+    .container
+      .row
+        .col-6
+          form(method='GET', action='/auth/facebook')
+            .text-center.mt-4
+              button.btn.btn-primary(type='submit') Login with Facebook
+        .col-6
+          form(method='GET', action='/auth/google')
+            .text-center.mt-4
+              button.btn.btn-primary(type='submit') Login with Google+
+      // Material form register
+      // Material input text
+      form.md-form(method='POST', action='/upload' enctype='multipart/form-data')
+        .file-field
+          .btn.btn-primary.btn-sm.float-left
+            span Choose file
+            input(type='file' name='file' id='file')
+          .file-path-wrapper
+            input.file-path.validate(type='text', placeholder='Upload your image')
+        .text-center.mt-4
+          button.btn.btn-primary(type='submit') Submit
+      h1  Display the images here
+
+      if files
+        ul
+          each file in files
+            li
+              img(src='/image/'+file.filename)
+      // Material form register
+    // SCRIPTS
+    // JQuery
+    // <script type="text/javascript" src="javasscripts/jquery-3.2.1.min.js"></script>
+    // Bootstrap tooltips
+    script(type='text/javascript', src='javascripts/popper.min.js')
+    // Bootstrap core JavaScript
+    script(type='text/javascript', src='javascripts/bootstrap.min.js')
+    // MDB core JavaScript
+    script(type='text/javascript', src='javascripts/mdb.min.js')
+    script.
+      new WOW().init();
+      // MDB Lightbox Init
+      $(function () {
+      $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+      });
+    script.
+      // SideNav Button Initialization
+      $(".button-collapse").sideNav();
+      // SideNav Scrollbar Initialization
+      var sideNavScrollbar = document.querySelector('.custom-scrollbar');
+      Ps.initialize(sideNavScrollbar);
