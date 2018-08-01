@@ -1,7 +1,7 @@
  
 
 'use strict'
-
+// This is a basic model to define the information on each individual church
 
  var mongoose = require('mongoose');
   var Schema = mongoose.Schema;
