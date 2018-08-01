@@ -1,7 +1,7 @@
  var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
-var cookieParser = require('cookie-parser');
+//var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose')
 var bodyParser = require('body-parser');
@@ -46,7 +46,7 @@ db.once('open', function () {
 // Create Storage Engine
 
 const storage = new GridFsStorage({
-  url: 'mongodb://localhost/church',
+  url: process.env.MONGODB_URI || 'mongodb://localhost/church',
   file: (req, file) => {
     return new Promise((resolve, reject) => {
       crypto.randomBytes(16, (err, buf) => {
