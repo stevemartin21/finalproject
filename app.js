@@ -118,7 +118,7 @@ app.get('/upload', middleware.checkLogin, function(req, res, next){
 	gfs.files.find().toArray(function(err, files){
 
 		if(!files || files.length===0 ){
-			res.render('addImage', {files:false})
+			res.render('addImage2', {files:false})
 		}else{
 			files.map(function(file){
 				if(file.contentType==='image/jpeg' || file.contentType ==='image/png' || file.contentType ==='image/jpg' ){
