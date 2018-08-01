@@ -1,4 +1,4 @@
-var createError = require('http-errors');
+ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -32,7 +32,7 @@ let gfs;
 
 
 
-mongoose.connect('mongodb://localhost/church');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/church');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
