@@ -1,18 +1,8 @@
 'use strict';
 
 
-
-
-/*
-function checkLogin(req, res, next) {
-  if (req.session && req.session.UserId) {
-    return res.redirect('/addChuch');
-  }
-  return next();
-}
-
-*/
-
+//This function is middleware that is put in to test if the user is logged in
+//  it will see if there is a session created and if there is a userid created , I have attached this to several routes 
 
 function checkLogin(req, res, next) {
   if (req.session && req.session.UserId) {
@@ -23,7 +13,5 @@ function checkLogin(req, res, next) {
     return next(err);
   }
 }
-
-
 
 module.exports.checkLogin = checkLogin;
