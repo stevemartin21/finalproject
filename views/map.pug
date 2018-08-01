@@ -15,6 +15,9 @@ html(lang='en')
     link(rel='stylesheet', href='stylesheets/jquery-ui.css')
     link(rel='stylesheet', href='stylesheets/styleIt.css')
     style.
+      #map {
+      height: 800px;
+      }
       .top-nav-collapse {
       background-color: #3f51b5!important;
       }
@@ -48,12 +51,12 @@ html(lang='en')
         // Links
         ul.navbar-nav.mr-auto
           li.nav-item.active
-            a.nav-link(href='#')
+            a.nav-link(href='/')
               | Home
               span.sr-only (current)
           li.nav-item.float-right
             a.nav-link.float-right(href='/patrons') Patrons
-          li.nav-item
+          li.nav-item.float-right
             a.nav-link.float-right(href='/map') Map
           li.nav-item
             a.nav-link.float-right(href='/auth') Register
@@ -64,7 +67,7 @@ html(lang='en')
     // /.Navbar
     // Main Navigation
     header
-      .view.jarallax(data-jarallax='{"speed": 0.2}', style="background-image: url('images/kaysvillePres.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;")
+      .view.jarallax(data-jarallax='{"speed": 0.2}', style="background-image: url('images/salinaPres.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;")
         .mask.rgba-white-light
           .container.flex-center.text-center
             .row.mt-5
@@ -74,27 +77,8 @@ html(lang='en')
                   a.indigo-text.font-weight-bold
                 h5.text-uppercase.mb-3.mt-1.font-weight-bold.wow.fadeIn(data-wow-delay='0.4s') Discover the history, see the beauty, and experience these amazing buildings
       .container
-        // Grid row
-        .row
-          // Grid column
-          .col-md-12.text-center.mb-3
-            h1.font-weight-bold.light-blue-text.my-3 Become a Patron
-            p(align='justify')
-              | One of the best way you can help and contribute is by becoming a patron of your project.  This is a way to be involved and help others experience these amazing buildings.
-          // Grid column
-        // Grid row  https://mdbootstrap.com/img/Photos/Others/food2.jpg
-      .view.jarallax.intro-2(data-jarallax='{"speed": 0.2}', style="background-image: url('images/torre.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;")
-        .mask.rgba-purple-slight
-          .container.h-100.d-flex.align-items-center.d-flex.justify-content-center
-            .row.mt-5
-              .col-md-12.wow.fadeIn.mb-3
-                .intro-info-content.text-center
-                  h1.display-1.white-text.mb-2.wow.fadeInDown(data-wow-delay='0.3s') Become a Patron
-                  h4.mb-3.mt-1.white-text.font-weight-bold.wow.fadeIn(data-wow-delay='0.4s')
-      h1.text-center List of Current Patrons
-      ul.list-group
-        each username in usernames
-          li.list-group-item #{username.name}
+        h1.text-center Google Map
+        #map
     // Main Navigation
     // Footer
     footer.page-footer.font-small.mdb-color.pt-4
@@ -182,6 +166,15 @@ html(lang='en')
         // Grid row
       // Footer Links
     // Footer
+    script.
+      var map;
+      function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 39.3210, lng: 111.0937},
+      zoom: 8
+      });
+      }
+    script(src='https://maps.googleapis.com/maps/api/js?key='+ theKey + '&callback=initMap', async='', defer='')
     // SCRIPTS
     // JQuery
     // <script type="text/javascript" src="javascripts/jquery-3.2.1.min.js"></script>
